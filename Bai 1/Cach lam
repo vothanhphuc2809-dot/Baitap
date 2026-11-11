@@ -1,1 +1,111 @@
+BÁO CÁO BÀI THỰC HÀNH BA1 – NODE.JS
+1. Mục tiêu bài thực hành
+Cài đặt môi trường Node.js LTS.
+Kiểm tra phiên bản Node.js và npm.
+Làm quen với cách chạy chương trình JavaScript bằng Node.js.
+Tạo và thực thi file hello.js.
+Quan sát và mô tả kết quả chương trình.
+2. Cài đặt Node.js LTS
 
+Truy cập trang chủ Node.js:
+
+https://nodejs.org/
+
+Tiến hành tải và cài đặt phiên bản Node.js LTS phù hợp với hệ điều hành Windows.
+
+Sau khi cài đặt hoàn tất, mở Terminal trong VS Code hoặc PowerShell để kiểm tra.
+
+Hình 1: Cài đặt Node.js LTS
+
+
+3. Kiểm tra phiên bản Node.js và npm
+
+Mở Terminal và thực hiện hai lệnh:
+
+bash
+node -v
+npm -v
+
+
+Kết quả:
+
+node -v: Hiển thị phiên bản Node.js đã cài đặt.
+npm -v: Hiển thị phiên bản npm (Node Package Manager).
+
+Hình 2: Kết quả kiểm tra phiên bản Node.js và npm
+
+📷 [CHÈN ẢNH TERMINAL HIỂN THỊ node -v VÀ npm -v TẠI ĐÂY]
+4. Tạo file hello.js
+
+Tạo một file có tên hello.js và nhập đoạn code sau:
+
+javascript
+var http = require('http');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+  res.end('Hello World! TOI LA VO THANH PHUC');
+}).listen(3000, function () {
+  console.log('Server dang chay tai http://localhost:3000');
+});
+
+
+Giải thích chương trình:
+
+require('http'): Import module HTTP có sẵn trong Node.js.
+http.createServer(): Tạo một HTTP Server.
+res.writeHead(200, ...): Gửi mã trạng thái HTTP 200 (thành công) và khai báo kiểu nội dung trả về.
+res.end(): Trả nội dung Hello World! TOI LA VO THANH PHUC về trình duyệt.
+listen(3000): Khởi chạy máy chủ tại cổng 3000.
+
+Hình 3: Code chương trình hello.js
+
+📷 [CHÈN ẢNH CODE HELLO.JS TẠI ĐÂY]
+5. Chạy chương trình và mô tả kết quả
+
+Mở Terminal tại thư mục chứa file hello.js, thực hiện lệnh:
+
+bash
+node hello.js
+
+
+Khi chương trình chạy thành công, Terminal hiển thị:
+
+text
+Server dang chay tai http://localhost:3000
+
+
+Tiếp theo, mở trình duyệt và truy cập địa chỉ:
+
+http://localhost:3000
+
+Kết quả hiển thị trên trình duyệt:
+
+text
+Hello World! TOI LA VO THANH PHUC
+
+
+Nhận xét:
+
+Chương trình đã tạo thành công một HTTP Server bằng Node.js và lắng nghe các yêu cầu tại cổng 3000. Khi người dùng truy cập địa chỉ localhost:3000, máy chủ trả về nội dung HTML là "Hello World! TOI LA VO THANH PHUC".
+
+Như vậy, chương trình hoạt động đúng yêu cầu và bước đầu giúp làm quen với việc xây dựng Web Server bằng Node.js.
+
+Hình 4: Kết quả chạy chương trình trên Terminal
+
+📷 [CHÈN ẢNH TERMINAL KHI CHẠY NODE HELLO.JS TẠI ĐÂY]
+
+Hình 5: Kết quả hiển thị trên trình duyệt
+
+📷 [CHÈN ẢNH TRÌNH DUYỆT LOCALHOST:3000 TẠI ĐÂY]
+6. Kết luận
+
+Qua bài thực hành, em đã:
+
+Biết cách cài đặt Node.js phiên bản LTS.
+Biết kiểm tra phiên bản Node.js và npm bằng Terminal.
+Biết tạo và chạy chương trình JavaScript bằng Node.js.
+Hiểu cách sử dụng module HTTP để tạo Web Server đơn giản.
+Biết cách truy cập máy chủ thông qua địa chỉ localhost và cổng 3000.
+
+Bài thực hành BA1 đã hoàn thành.
